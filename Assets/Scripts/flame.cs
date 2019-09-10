@@ -9,14 +9,14 @@ public class flame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startpos = transform.position;
+        startpos = transform.localPosition;
         InvokeRepeating("Flame", 0, 0.1f);
     }
 
     // Update is called once per frame
     void Flame()
     {
-        transform.position=new Vector3(startpos.x+Random.Range(-factor, factor),
+        transform.localPosition=new Vector3(startpos.x+Random.Range(-factor, factor),
             startpos.y + Random.Range(-factor, factor),
             startpos.z + Random.Range(-factor, factor));
     }
