@@ -26,6 +26,8 @@ public class SimpleHand : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 Rigidbody rdb = hit.collider.gameObject.GetComponent<Rigidbody>();
+                if (!rdb)
+                     rdb = hit.collider.gameObject.GetComponentInParent<Rigidbody>();
                 if (rdb)
                 {
                     rdb.AddForceAtPosition(transform.forward* forcedirection, hit.point, ForceMode.Impulse);
