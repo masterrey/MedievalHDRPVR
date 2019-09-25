@@ -12,18 +12,17 @@ public class VRHand : MonoBehaviour
     private float m_prevFlex;
     public float grabBegin;
     bool stillgrab = false;
+    public Animator handgrab;
     // Start is called before the first frame update
     void Start()
     {
 
     }
-
-    // Update is called once per frame
     void Update()
     {
-
         m_prevFlex = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, m_controller);
-        print(m_prevFlex);
+        //print(m_prevFlex);
+        handgrab.SetFloat("Flex", m_prevFlex);
         if (m_prevFlex >= grabBegin&& !stillgrab)
         {
             OnGrab();
@@ -32,9 +31,7 @@ public class VRHand : MonoBehaviour
         {
             OnDrop();
         }
-
     }
-
     void OnGrab()
     {
         if (grabobject)
@@ -44,6 +41,7 @@ public class VRHand : MonoBehaviour
             {
                 joint = gameObject.AddComponent<FixedJoint>();
                 joint.connectedBody = grabobject;
+                joint.breakForce = 20000;
             }
         }
         stillgrab = true;
@@ -55,13 +53,22 @@ public class VRHand : MonoBehaviour
         stillgrab = false;
     }
 
+    private void OnJointBreak(float breakForce)
+    {
+        grabobject = null;
+        stillgrab = false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.CompareTag("GameController"))
+        if (other.CompareTag("GameController")|| other.CompareTag("Key"))
         {
             grabobject = other.gameObject.GetComponent<Rigidbody>();
-
+            if (!grabobject)
+            {
+                grabobject = other.gameObject.GetComponentInParent<Rigidbody>();
+            }
 
         }
     }

@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dfk_candle_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1500055415243300, guid: 2e5c62a4f52e6294794190ca289c576b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4560160398046466, guid: 2e5c62a4f52e6294794190ca289c576b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.015
@@ -67,6 +71,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.66666675
       objectReference: {fileID: 0}
+    - target: {fileID: 1680396080500948, guid: 2e5c62a4f52e6294794190ca289c576b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e5c62a4f52e6294794190ca289c576b, type: 3}
 --- !u!1001 &8101184774136257396
@@ -79,6 +87,10 @@ PrefabInstance:
     - target: {fileID: 1500055415243300, guid: 2e5c62a4f52e6294794190ca289c576b, type: 3}
       propertyPath: m_Name
       value: dfk_candle_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500055415243300, guid: 2e5c62a4f52e6294794190ca289c576b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4560160398046466, guid: 2e5c62a4f52e6294794190ca289c576b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -136,6 +148,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.66666675
       objectReference: {fileID: 0}
+    - target: {fileID: 1680396080500948, guid: 2e5c62a4f52e6294794190ca289c576b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e5c62a4f52e6294794190ca289c576b, type: 3}
 --- !u!1001 &8530060858447356574
@@ -145,11 +161,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8443124085884086227, guid: 94edbfc0d00d3d34d8466b5a4efbbf27,
-        type: 3}
-      propertyPath: m_Name
-      value: porta_caneta
-      objectReference: {fileID: 0}
     - target: {fileID: 4861452487237604800, guid: 94edbfc0d00d3d34d8466b5a4efbbf27,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -220,10 +231,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8443124085884086227, guid: 94edbfc0d00d3d34d8466b5a4efbbf27,
+        type: 3}
+      propertyPath: m_Name
+      value: porta_caneta
+      objectReference: {fileID: 0}
     - target: {fileID: 1382793155414618090, guid: 94edbfc0d00d3d34d8466b5a4efbbf27,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5626984906791785191, guid: 94edbfc0d00d3d34d8466b5a4efbbf27,
+        type: 3}
+      propertyPath: m_TagString
+      value: GameController
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94edbfc0d00d3d34d8466b5a4efbbf27, type: 3}
