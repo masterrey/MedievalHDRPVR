@@ -4025,7 +4025,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 0
   m_WaitForFirstFrame: 1
@@ -25157,6 +25157,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1367755999}
+  - component: {fileID: 1367756000}
+  - component: {fileID: 1367756001}
   m_Layer: 0
   m_Name: Theater
   m_TagString: Untagged
@@ -25181,6 +25183,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1367756000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367755998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb372cccb7641fd41ab6705a9e9a8943, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vplayer: {fileID: 212354779}
+  videoloop: {fileID: 32900000, guid: 7f0cc1c6004b6f645ac8f0fb68af5093, type: 3}
+--- !u!114 &1367756001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367755998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 519281b358f1ee44fb51571d63b555a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vplayer: {fileID: 0}
 --- !u!1001 &1368518025
 PrefabInstance:
   m_ObjectHideFlags: 0
