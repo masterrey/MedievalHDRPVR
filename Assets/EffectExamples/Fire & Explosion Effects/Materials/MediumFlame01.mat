@@ -9,13 +9,14 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: MediumFlame01
   m_Shader: {fileID: 4800000, guid: c4edd00ff2db5b24391a4fcb1762e459, type: 3}
-  m_ShaderKeywords: _ALPHABLEND_ON _BLENDMODE_ADD _DETAIL_MAP _DOUBLESIDED_ON _EMISSION
+  m_ShaderKeywords: _ALPHABLEND_ON _ALPHATEST_ON _BLENDMODE_ALPHA _DETAIL_MAP _EMISSION
     _EMISSIVE_COLOR_MAP _FADING_ON _NORMALMAP _NORMALMAP_TANGENT_SPACE _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 1
-  m_CustomRenderQueue: 3000
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2000
   stringTagMap:
+    MotionVector: User
     RenderType: Transparent
   disabledShaderPasses:
   - DistortionVectors
@@ -40,6 +41,22 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CarPaint2_BRDFColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CarPaint2_BTFFlakeMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CarPaint2_FlakeThetaFISliceLUTMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ClearcoatNormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -88,7 +105,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 1b9340725602e9d40a4e86d4b9dfcb78, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -113,6 +130,50 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SVBRDF_AlphaMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SVBRDF_AnisoRotationMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SVBRDF_ClearcoatColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SVBRDF_ClearcoatIORMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SVBRDF_DiffuseColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SVBRDF_FresnelMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SVBRDF_HeightMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SVBRDF_NormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SVBRDF_SpecularColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SVBRDF_SpecularLobeMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_DD1E610B_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 4de307a86f9a46b49b4e61832e8395a9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecularColorMap:
@@ -148,26 +209,36 @@ Material:
     - _AORemapMin: 0
     - _ATDistance: 1
     - _AlbedoAffectEmissive: 0
-    - _AlphaCutoff: 0.295
-    - _AlphaCutoffEnable: 0
+    - _AlphaCutoff: 0.152
+    - _AlphaCutoffEnable: 1
     - _AlphaCutoffPostpass: 0.5
     - _AlphaCutoffPrepass: 0.5
     - _AlphaCutoffShadow: 0.5
-    - _AlphaDstBlend: 1
+    - _AlphaDstBlend: 10
     - _AlphaSrcBlend: 1
     - _Anisotropy: 0
-    - _BlendMode: 1
+    - _AxF_BRDFType: 0
+    - _BlendMode: 0
     - _BlendOp: 0
     - _BumpScale: 1
     - _CameraFadingEnabled: 0
     - _CameraFarFadeDistance: 2
     - _CameraNearFadeDistance: 1
+    - _CarPaint2_BRDFColorMapScale: 1
+    - _CarPaint2_BTFFlakeMapScale: 1
+    - _CarPaint2_CTDiffuse: 0
+    - _CarPaint2_ClearcoatIOR: 1
+    - _CarPaint2_FlakeMaxThetaI: 0
+    - _CarPaint2_FlakeNumThetaF: 0
+    - _CarPaint2_FlakeNumThetaI: 0
+    - _CarPaint2_FlakeTiling: 1
+    - _CarPaint2_LobeCount: 0
     - _CoatMask: 0
     - _ColorMode: 0
     - _Cull: 0
-    - _CullMode: 0
-    - _CullModeForward: 0
-    - _Cutoff: 0.295
+    - _CullMode: 2
+    - _CullModeForward: 2
+    - _Cutoff: 0.152
     - _DepthOffsetEnable: 0
     - _DetailAlbedoScale: 1
     - _DetailNormalMapScale: 1
@@ -197,9 +268,9 @@ Material:
     - _DistortionStrengthScaled: 0.1
     - _DistortionVectorBias: -1
     - _DistortionVectorScale: 2
-    - _DoubleSidedEnable: 1
+    - _DoubleSidedEnable: 0
     - _DoubleSidedNormalMode: 1
-    - _DstBlend: 1
+    - _DstBlend: 10
     - _EmissionEnabled: 1
     - _EmissiveColorMode: 1
     - _EmissiveExposureWeight: 0.016
@@ -210,6 +281,7 @@ Material:
     - _EnableGeometricSpecularAA: 0
     - _EnableSpecularOcclusion: 0
     - _EnergyConservingSpecularColor: 1
+    - _Flags: 0
     - _FlipbookMode: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -232,6 +304,8 @@ Material:
     - _LightingEnabled: 0
     - _LinkDetailsWithBase: 1
     - _MaterialID: 1
+    - _MaterialTilingU: 1
+    - _MaterialTilingV: 1
     - _Metallic: 0
     - _Mode: 2
     - _NormalMapSpace: 0
@@ -245,7 +319,13 @@ Material:
     - _Parallax: 0.02
     - _ReceivesSSR: 1
     - _RefractionModel: 0
+    - _RenderQueueType: 1
+    - _RequireSplitLighting: 0
     - _SSRefractionProjectionModel: 0
+    - _SVBRDF_BRDFType: 0
+    - _SVBRDF_BRDFVariants: 0
+    - _SVBRDF_HeightMapMaxMM: 0
+    - _SVBRDF_SpecularLobeMapScale: 1
     - _Smoothness: 0.5
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
@@ -288,7 +368,7 @@ Material:
     - _UseEmissiveIntensity: 1
     - _UseShadowThreshold: 0
     - _ZTestDepthEqualForOpaque: 4
-    - _ZTestGBuffer: 4
+    - _ZTestGBuffer: 3
     - _ZTestModeDistortion: 4
     - _ZTestTransparent: 4
     - _ZWrite: 1
@@ -296,13 +376,17 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
+    - _CarPaint2_BRDFColorMapUVScale: {r: 1, g: 1, b: 0, a: 0}
+    - _CarPaint2_CTCoeffs: {r: 1, g: 1, b: 1, a: 1}
+    - _CarPaint2_CTF0s: {r: 1, g: 1, b: 1, a: 1}
+    - _CarPaint2_CTSpreads: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.2830189, g: 0.26032397, b: 0.26032397, a: 1}
     - _ColorAddSubDiff: {r: 1, g: 0, b: 0, a: 0}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissiveColor: {r: 0.2830189, g: 0.26032397, b: 0.26032397, a: 1}
-    - _EmissiveColorLDR: {r: 0.2830189, g: 0.26032397, b: 0.26032397, a: 1}
+    - _EmissiveColorLDR: {r: 0.9716981, g: 0.9579477, b: 0.9579477, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _SoftParticleFadeParams: {r: 0, g: 10, b: 0, a: 0}
@@ -312,4 +396,4 @@ Material:
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
-    - _UnlitColor: {r: 1, g: 1, b: 1, a: 1}
+    - _UnlitColor: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
