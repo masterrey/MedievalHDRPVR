@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class WinGame : MonoBehaviour
 {
+   
     // Start is called before the first frame update
     void Start()
     {
+        
         Invoke("LoseGame", 100);
-
+        
     }
 
     // Update is called once per frame
@@ -17,7 +19,9 @@ public class WinGame : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene("intro");
+            
+            StartCoroutine(LoadScene("intro"));
+          
         }
        
     }
@@ -25,12 +29,22 @@ public class WinGame : MonoBehaviour
     {
         if (other.CompareTag("Key"))
         {
-            SceneManager.LoadScene("Win");
+           
+            StartCoroutine(LoadScene("Win"));
+           
         }
     }
 
     void LoseGame()
     {
-        SceneManager.LoadScene("Lose");
+       
+        StartCoroutine(LoadScene("lose"));
     }
+
+    IEnumerator LoadScene(string level)
+    {
+        yield return new WaitForSeconds(10);
+        SceneManager.LoadScene(level);
+    }
+
 }

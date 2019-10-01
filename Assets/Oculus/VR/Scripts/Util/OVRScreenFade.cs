@@ -128,6 +128,8 @@ public class OVRScreenFade : MonoBehaviour
         }
     }
 
+
+
 	void OnEnable()
 	{
 		if (!fadeOnStart)
